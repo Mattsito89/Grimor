@@ -39,3 +39,9 @@ Los archivos de plantilla se ignoran automáticamente por nombre. Puedes copiarl
 - `JS/Magia/Metamagia/metamagiaTemplate.js` → plantilla de principio de Metamagia
 
 > Importante: el sistema está diseñado para ejecutarse mediante Live Server. No se garantiza el descubrimiento automático al abrir `index.html` directamente con `file://`, porque el navegador no permite listar carpetas locales de la misma forma.
+## Vercel
+
+El proyecto mantiene la detección automática por listado de carpetas para VS Code + Live Server. Vercel no proporciona ese listado HTML, por lo que durante el build ejecuta automáticamente `npm run build`, que genera `JS/vias-index.vercel.js` con los archivos de contenido encontrados. `JS/vias-index.js` usa ese índice como respaldo cuando no puede descubrir las carpetas.
+
+No necesitas ejecutar el build manualmente antes de cada despliegue: Vercel lo ejecuta mediante `vercel.json`. Para Vercel, el **Root Directory** debe ser la carpeta que contiene `index.html`, `JS/` y `css/`.
+

@@ -79,6 +79,7 @@ async function descubrirJS(carpeta) {
     const documento = new DOMParser().parseFromString(html, "text/html");
     return [...documento.querySelectorAll("a[href]")]
         .map(a => new URL(a.getAttribute("href"), url))
+        .filter(u => u.pathname.startsWith(url.pathname))
         .filter(u => u.pathname.toLowerCase().endsWith(".js"))
         .filter(u => !IGNORAR.has(u.pathname.split("/").pop()));
 }
@@ -92,7 +93,7 @@ function ordenar(items, preferidos = []) {
     });
 }
 
-async function cargarContenido() {
+async function cargarContenidoDesdeDirectorios() {
     const buckets = {
         magia: { oficiales: [], metamagia: [], custom: [], subvias: [], subviasCustom: [] },
         psiquica: { oficiales: [], custom: [] },
@@ -100,6 +101,7 @@ async function cargarContenido() {
         convocatoria: { oficiales: [], custom: [] }
     };
     const ids = new Map();
+    let archivosEncontrados = 0;
 
     for (const [categoria, grupo, carpeta] of CARPETAS) {
         let archivos;
@@ -109,6 +111,8 @@ async function cargarContenido() {
             console.warn(`[Grimorio] ${carpeta}: ${error.message}`);
             continue;
         }
+
+        archivosEncontrados += archivos.length;
 
         for (const archivo of archivos) {
             try {
@@ -129,6 +133,8 @@ async function cargarContenido() {
         }
     }
 
+    if (!archivosEncontrados) return null;
+
     buckets.magia.oficiales = ordenar(buckets.magia.oficiales, ORDER.magiaOficiales);
     buckets.magia.metamagia = ordenar(buckets.magia.metamagia, ORDER.magiaMetamagia);
     buckets.magia.subvias = ordenar(buckets.magia.subvias, ORDER.magiaSubvias);
@@ -147,6 +153,17 @@ async function cargarContenido() {
         ki: { label: "Ki", tituloPanel: "TÉCNICAS DE KI", tituloSeleccion: "SELECCIONA UNA TÉCNICA", mensajeInicial: "Selecciona una técnica de Ki", mensajeDetalleVacio: "Selecciona una técnica de Ki para comenzar.", prefijoTitulo: "TÉCNICA DE", ...buckets.ki },
         convocatoria: { label: "Convocatoria", tituloPanel: "CONVOCATORIA", tituloSeleccion: "SELECCIONA UNA INVOCACIÓN", mensajeInicial: "Selecciona una invocación", mensajeDetalleVacio: "Selecciona una invocación para comenzar.", prefijoTitulo: "CONVOCACIÓN DE", ...buckets.convocatoria }
     };
+}
+
+async function cargarContenido() {
+    const dinamico = await cargarContenidoDesdeDirectorios();
+    if (dinamico) return dinamico;
+
+    // Vercel y otros hostings estáticos no exponen listados de directorios.
+    // En ese caso usamos el índice generado durante el build.
+    console.info("[Grimorio] No hay listado de directorios; usando índice estático de despliegue.");
+    const moduloGenerado = await import("./vias-index.vercel.js");
+    return moduloGenerado.CATEGORIAS;
 }
 
 export const CATEGORIAS = await cargarContenido();
