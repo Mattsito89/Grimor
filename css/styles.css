@@ -1,0 +1,1110 @@
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root {
+
+    --bg-main: #08090c;
+    --bg-panel: #101218;
+    --bg-panel-light: #151821;
+
+    --border: #292d37;
+
+    --text-main: #e7e9ee;
+    --text-secondary: #9298a6;
+    --text-muted: #626876;
+
+    --accent: #b9a46a;
+
+    --agua: #3b82f6;
+    --fuego: #ef4444;
+
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #161922 0%,
+            #08090c 55%
+        );
+
+    color: var(--text-main);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+}
+
+
+/* =====================================================
+   BARRA DE CATEGORÍAS (MAGIA / PSÍQUICA / KI / ...)
+===================================================== */
+
+.categorias-barra {
+
+    display: flex;
+
+    height: 48px;
+
+    background: #0c0d11;
+
+    border-bottom:
+        1px solid var(--border);
+
+}
+
+
+.categoria-btn {
+
+    padding: 0 28px;
+
+    border: none;
+
+    border-bottom:
+        2px solid transparent;
+
+    background: transparent;
+
+    color: var(--text-muted);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s,
+        border-color 0.2s,
+        background 0.2s;
+
+}
+
+
+.categoria-btn:hover {
+
+    color: var(--text-main);
+
+    background: rgba(255,255,255,0.03);
+
+}
+
+
+.categoria-btn.activo {
+
+    color: var(--accent);
+
+    border-bottom-color: var(--accent);
+
+}
+
+
+/* =====================================================
+   GRIMORIO
+===================================================== */
+
+/* La interfaz ocupa la ventana disponible debajo de la barra superior.
+   Cada panel gestiona su propio desplazamiento para que buscar hechizos
+   no obligue a desplazar toda la página. */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+}
+
+.grimorio {
+
+    width: 100%;
+    height: calc(100vh - 48px);
+    min-height: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        220px
+        300px
+        1fr;
+
+    overflow: hidden;
+
+}
+
+
+/* =====================================================
+   PANELES
+===================================================== */
+
+.vias-panel,
+.hechizos-panel,
+.detalle-panel {
+
+    min-width: 0;
+    min-height: 0;
+
+    background: var(--bg-panel);
+
+    border-right:
+        1px solid var(--border);
+
+    overflow: hidden;
+
+}
+
+/* El panel de vías ocupa toda la altura disponible y reparte su espacio
+   entre cabecera, selector y lista. La lista es la que hace scroll. */
+.vias-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+.vias-panel > .panel-titulo,
+.vias-panel > .tipo-via-selector,
+.vias-panel > .subvias-bloque {
+    flex: 0 0 auto;
+}
+
+
+.detalle-panel {
+
+    border-right: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            #11131a,
+            #0b0c10
+        );
+
+}
+
+
+/* =====================================================
+   TÍTULOS
+===================================================== */
+
+.panel-titulo {
+
+    height: 64px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 24px;
+
+    border-bottom:
+        1px solid var(--border);
+
+    color: var(--text-secondary);
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* =====================================================
+   SUB-SELECTOR: OFICIALES / CUSTOM
+===================================================== */
+
+.tipo-via-selector {
+
+    display: flex;
+
+    border-bottom:
+        1px solid var(--border);
+
+}
+
+
+.tipo-via-btn {
+
+    flex: 1;
+
+    padding: 12px 0;
+
+    border: none;
+
+    border-bottom:
+        2px solid transparent;
+
+    background: transparent;
+
+    color: var(--text-muted);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 0.5px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s,
+        border-color 0.2s;
+
+}
+
+
+.tipo-via-btn:hover {
+
+    color: var(--text-secondary);
+
+}
+
+
+.tipo-via-btn.activo {
+
+    color: var(--accent);
+
+    border-bottom-color: var(--accent);
+
+}
+
+
+/* =====================================================
+   VÍAS
+===================================================== */
+
+.vias-container {
+
+    padding: 12px 0;
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+
+}
+
+.vias-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.vias-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.vias-container::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 4px;
+}
+
+.vias-container::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
+
+
+.via-btn {
+
+    width: 100%;
+
+    min-height: 58px;
+
+    padding: 0 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    border: none;
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.04);
+
+    background: transparent;
+
+    color: var(--text-secondary);
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition:
+        background 0.2s,
+        color 0.2s;
+
+}
+
+
+.via-btn:hover {
+
+    background: var(--bg-panel-light);
+
+    color: var(--text-main);
+
+}
+
+
+.via-btn.activo {
+
+    background: #191c24;
+
+    color: var(--text-main);
+
+}
+
+
+.via-indicador {
+
+    width: 4px;
+
+    height: 24px;
+
+    border-radius: 2px;
+
+}
+
+
+.via-nombre {
+
+    flex: 1;
+
+    font-size: 16px;
+
+}
+
+
+.via-flecha {
+
+    font-size: 20px;
+
+    color: var(--text-muted);
+
+}
+
+
+/* =====================================================
+   FILA DE SUBVÍAS (se ve como una vía + dropdown)
+===================================================== */
+
+.subvias-bloque {
+
+    padding-bottom: 12px;
+
+}
+
+
+.subvia-fila {
+
+    cursor: pointer;
+
+}
+
+
+.subvia-select {
+
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 6px 4px;
+
+    background: transparent;
+
+    border: none;
+
+    border-radius: 3px;
+
+    color: inherit;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+}
+
+
+.subvia-select option {
+
+    background: var(--bg-panel-light);
+
+    color: var(--text-main);
+
+}
+
+
+.subvia-select:focus {
+
+    outline: none;
+
+}
+
+
+.subvia-fila:focus-within {
+
+    background: var(--bg-panel-light);
+
+}
+
+
+/* =====================================================
+   LISTA DE HECHIZOS
+===================================================== */
+
+.hechizos-container {
+
+    padding: 10px 0;
+
+}
+
+
+/* Lista de hechizos: desplazamiento independiente del resto de la página. */
+.hechizos-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+.hechizos-panel > .panel-titulo {
+    flex: 0 0 auto;
+}
+
+.hechizos-container {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+}
+
+.hechizos-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.hechizos-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.hechizos-container::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 4px;
+}
+
+.hechizos-container::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
+
+.hechizo-btn {
+
+    width: 100%;
+
+    min-height: 55px;
+
+    padding: 0 18px;
+
+    display: grid;
+
+    grid-template-columns:
+        38px
+        1fr
+        20px;
+
+    align-items: center;
+
+    gap: 8px;
+
+    border: none;
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.04);
+
+    background: transparent;
+
+    color: var(--text-secondary);
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition:
+        background 0.2s,
+        color 0.2s;
+
+}
+
+
+.hechizo-btn:hover {
+
+    background: var(--bg-panel-light);
+
+    color: var(--text-main);
+
+}
+
+
+.hechizo-btn.activo {
+
+    background: #1a1d25;
+
+    color: var(--accent);
+
+}
+
+
+.hechizo-nivel {
+
+    color: var(--text-muted);
+
+    font-size: 12px;
+
+}
+
+
+.hechizo-nombre {
+
+    font-size: 15px;
+
+}
+
+
+.hechizo-flecha {
+
+    color: var(--text-muted);
+
+    font-size: 18px;
+
+}
+
+
+/* =====================================================
+   PANEL DE DETALLE
+===================================================== */
+
+.detalle-panel {
+
+    overflow-y: auto;
+
+}
+
+
+.detalle-contenido {
+
+    max-width: 950px;
+
+    margin: 0 auto;
+
+    padding: 60px;
+
+}
+
+
+/* =====================================================
+   CABECERA DEL HECHIZO
+===================================================== */
+
+.detalle-header {
+
+    padding-bottom: 30px;
+
+    border-bottom:
+        1px solid var(--border);
+
+}
+
+
+.detalle-nivel {
+
+    margin-bottom: 12px;
+
+    color: var(--accent);
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.detalle-header h1 {
+
+    margin-bottom: 14px;
+
+    color: #f0f0f2;
+
+    font-size: 42px;
+
+    font-weight: normal;
+
+}
+
+
+.detalle-subtitulo {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+
+.detalle-subtitulo span {
+
+    padding: 5px 10px;
+
+    border: 1px solid var(--border);
+
+    color: var(--text-secondary);
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =====================================================
+   SECCIONES
+===================================================== */
+
+.detalle-seccion {
+
+    padding: 28px 0;
+
+    border-bottom:
+        1px solid var(--border);
+
+}
+
+
+.detalle-seccion h3 {
+
+    margin-bottom: 15px;
+
+    color: var(--accent);
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+}
+
+
+.detalle-seccion p {
+
+    color: #b8bcc7;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 17px;
+
+    line-height: 1.75;
+
+}
+
+
+
+/* =====================================================
+   INFORMACIÓN DE DISCIPLINA PSÍQUICA
+===================================================== */
+
+.disciplina-info {
+    margin: 10px 18px 44px;
+    padding: 18px 20px;
+    background: #151820;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+}
+
+.disciplina-info h3 {
+    margin: 0 0 10px;
+    color: var(--accent);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+}
+
+.disciplina-info > p {
+    margin: 0;
+    color: #b8bcc7;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+/* =====================================================
+   EFECTOS DE DISCIPLINAS PSÍQUICAS
+===================================================== */
+
+.psiquico-efectos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.psiquico-efecto {
+    min-height: 90px;
+    padding: 16px;
+    background: #151820;
+    border: 1px solid var(--border);
+}
+
+.psiquico-efecto strong {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--text-main);
+    font-size: 13px;
+}
+
+.psiquico-efecto p {
+    margin: 0;
+    color: #b8bcc7;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    line-height: 1.55;
+}
+
+/* =====================================================
+   GRADOS
+===================================================== */
+
+.grados {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 10px;
+
+}
+
+
+.grado {
+
+    min-height: 150px;
+
+    padding: 18px;
+
+    background: #151820;
+
+    border:
+        1px solid var(--border);
+
+}
+
+
+.grado strong {
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: var(--text-main);
+
+    font-size: 13px;
+
+}
+
+
+.grado p {
+
+    margin-bottom: 14px;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+}
+
+
+.grado small {
+
+    color: var(--text-muted);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =====================================================
+   MANTENIMIENTO
+===================================================== */
+
+.mantenimiento p {
+
+    color: var(--text-main);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================================
+   ESTADO VACÍO
+===================================================== */
+
+.detalle-vacio {
+
+    min-height: 60vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: var(--text-secondary);
+
+}
+
+
+.detalle-icono {
+
+    margin-bottom: 20px;
+
+    color: var(--accent);
+
+    font-size: 42px;
+
+}
+
+
+.detalle-vacio h2 {
+
+    margin-bottom: 10px;
+
+    color: var(--text-main);
+
+    font-size: 25px;
+
+    font-weight: normal;
+
+}
+
+
+.detalle-vacio p {
+
+    max-width: 400px;
+
+    color: var(--text-muted);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =====================================================
+   MENSAJE CENTRAL
+===================================================== */
+
+.mensaje-inicial {
+
+    padding: 50px 20px;
+
+    color: var(--text-muted);
+
+    text-align: center;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+   .grimorio {
+
+        grid-template-columns:
+            180px
+            250px
+            1fr;
+
+    }
+
+    .detalle-contenido {
+
+        padding: 40px;
+
+    }
+
+    .grados {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    html,
+    body {
+        height: auto;
+        min-height: 100%;
+    }
+
+    body {
+        overflow: auto;
+    }
+
+    .grimorio {
+
+        height: auto;
+        min-height: calc(100vh - 48px);
+
+        grid-template-columns: 1fr;
+
+        overflow: visible;
+
+    }
+
+
+    .vias-panel,
+    .hechizos-panel,
+    .detalle-panel {
+
+        min-height: 0;
+        overflow: hidden;
+
+        border-right: none;
+
+        border-bottom:
+            1px solid var(--border);
+
+    }
+
+
+    /* En móvil todas las categorías usan el mismo comportamiento: la
+       columna izquierda conserva su estructura y la lista de contenidos
+       tiene desplazamiento vertical independiente. Esto aplica por igual
+       a Magia, Psíquica, Ki y Convocatoria. */
+    .vias-panel {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .vias-container {
+
+        display: block;
+        flex: 1 1 auto;
+        min-height: 0;
+        max-height: 42vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        overscroll-behavior: contain;
+
+    }
+
+    .via-btn {
+
+        width: 100%;
+        min-width: 0;
+
+    }
+
+
+    .hechizos-panel {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hechizos-container {
+        flex: 1 1 auto;
+        min-height: 0;
+        max-height: 55vh;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+
+
+    .detalle-contenido {
+
+        padding: 30px 20px;
+
+    }
+
+
+    .detalle-header h1 {
+
+        font-size: 32px;
+
+    }
+
+
+    .grados,
+    .psiquico-efectos {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}

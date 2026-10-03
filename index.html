@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Grimorio interactivo de Ánima.">
+    <title>Grimorio de Ánima</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="categorias-barra" aria-label="Categorías del grimorio">
+        <button class="categoria-btn activo" data-categoria="magia" type="button">Magia</button>
+        <button class="categoria-btn" data-categoria="psiquica" type="button">Psíquica</button>
+        <button class="categoria-btn" data-categoria="ki" type="button">Ki</button>
+        <button class="categoria-btn" data-categoria="convocatoria" type="button">Convocatoria</button>
+    </nav>
+
+    <main class="grimorio">
+        <aside class="vias-panel" aria-label="Categoría y vías">
+            <div class="panel-titulo"><span id="categoria-titulo">VÍAS DE MAGIA</span></div>
+            <div id="tipo-via-container" class="tipo-via-selector" role="tablist" aria-label="Tipo de contenido"></div>
+            <div id="vias-container" class="vias-container"></div>
+            <div id="subvias-bloque" class="subvias-bloque" hidden></div>
+        </aside>
+
+        <section class="hechizos-panel" aria-label="Contenido">
+            <div class="panel-titulo"><span id="via-titulo">SELECCIONA UNA VÍA</span></div>
+            <div id="hechizos-container" class="hechizos-container" aria-live="polite"></div>
+        </section>
+
+        <section class="detalle-panel" aria-label="Detalle">
+            <div class="detalle-contenido" id="detalle-hechizo" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <noscript>Este grimorio necesita JavaScript habilitado para funcionar.</noscript>
+    <script type="module" src="JS/app.js"></script>
+</body>
+</html>
