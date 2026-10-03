@@ -5,7 +5,7 @@ export const disciplinaLuz = crearDisciplinaPsiquica({
     id: "luz",
     nombre: "Luz",
     color: "#fde047",
-    descripcion: "permite al psíquico controla la luz y las materias reflectantes.",
+    descripcion: "Esta disciplina permite al psíquico controla la luz y las materias reflectantes.",
     modificador: "",
     poderes: [
         {
@@ -14,7 +14,7 @@ export const disciplinaLuz = crearDisciplinaPsiquica({
             nivel: "1",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Otorga al psíquico la capacidad de controlar la intensidad y",
+            descripcion: "Otorga al psíquico la capacidad de controlar la intensidad y color de la luz. Si son de origen sobrenatural también obtiene la capacidad de desplazarla y moldearla a voluntad. En el caso de que se utilice este poder sobre una criatura elemental de luz es posible obtener el control sobre sus capacidades físicas si esta no supera la RF indicada.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -114,7 +114,7 @@ export const disciplinaLuz = crearDisciplinaPsiquica({
             nivel: "1",
             accion: "Activa",
             mantenimiento: "No",
-            descripcion: "El psíquico crea un intenso resplandor de luz de una zona",
+            descripcion: "El psíquico crea un intenso resplandor de luz de una zona cegando a los que se encuentren en ella. No es posible designar objetivos en su interior y todo aquel que la mire excepto el psíquico debe superar automáticamente una RF o quedarán cegados 1 turno por cada 10 puntos por los que se falle la Resistencia. Es posible sumar un +30 a la RF si prevee el flash y los cubre o posee alguna manera de protegerse los ojos.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -164,7 +164,7 @@ export const disciplinaLuz = crearDisciplinaPsiquica({
             nivel: "2",
             accion: "Pasiva",
             mantenimiento: "Sí",
-            descripcion: "Alterando la composición de la luz, el psíquico crea",
+            descripcion: "Alterando la composición de la luz, el psíquico crea un escudo de luz sólida que le permite detener todo tipo de ataque, incluyendo los de origen sobrenatural. Los ataques basados en luz no dañan la resistencia del escudo, pero los basados en oscuridad ven duplicado su daño contra él. La pantalla permanece con la misma cantidad de PV con los que fue creada, pero pierde 10 puntos por turno hasta que alcanza los PV de la dificultad que el psíquico puede mantener el poder. Mantenimiento: Si. 1 0 8",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -214,7 +214,7 @@ export const disciplinaLuz = crearDisciplinaPsiquica({
             nivel: "2",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Manipulando la luz, el psíquico crea imágenes holográficas",
+            descripcion: "Manipulando la luz, el psíquico crea imágenes holográficas de cualquier cosa que imagine. En el caso de que cree una imagen animada, esta podrá moverse con libertad, usando su Proyección Psíquica para desplazarla. Cualquier persona que vea un holograma deberá superar un control de Advertir contra Casi Imposible o de Buscar contra Muy Difícil para darse cuenta de que no es algo real, aunque si está en movimiento la dificultad de ambos controles disminuyen dos grados.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -264,7 +264,7 @@ export const disciplinaLuz = crearDisciplinaPsiquica({
             nivel: "3",
             accion: "Activa",
             mantenimiento: "No",
-            descripcion: "El psíquico comprime la luz creando un destructivo",
+            descripcion: "El psíquico comprime la luz creando un destructivo rayo de luz compacta. El ataque se produce en Calor debido a las altas temperaturas de la luz concentrada y, dado que las armaduras se funden a su contacto, reduce la TA del objetivo en una cantidad equivalente al valor indicado en la tabla. Si el psíquico lo desea puede realizar un barrido con el rayo, abarcando una línea de 5 metros de distancia. No obstante, al utilizar el láser de esta manera ve disminuido su Daño Base y su reducción de armadura a la mitad.",
             efectos: [
             {
                 "dificultad": "Rutinario",

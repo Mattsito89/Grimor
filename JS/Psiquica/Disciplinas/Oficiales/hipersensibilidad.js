@@ -5,8 +5,8 @@ export const disciplinaHipersensibilidad = crearDisciplinaPsiquica({
     id: "hipersensibilidad",
     nombre: "Hipersensibilidad",
     color: "#c084fc",
-    descripcion: "es el empleo del poder de la mente sobre los sentidos básicos, aumentándolos y mejorándolos hasta grados imposibles. modificadores que a cualquier habilidad Perceptiva.",
-    modificador: "Salvo que se indique lo contrario, se aplican los mismos",
+    descripcion: "Esta disciplina es el empleo del poder de la mente sobre los sentidos básicos, aumentándolos y mejorándolos hasta grados imposibles. Modificador: Salvo que se indique lo contrario, se aplican los mismos modificadores que a cualquier habilidad Perceptiva.",
+    modificador: "Salvo que se indique lo contrario, se aplican los mismos modificadores que a cualquier habilidad Perceptiva.",
     poderes: [
         {
             id: "filtrar-sentidos",
@@ -14,7 +14,7 @@ export const disciplinaHipersensibilidad = crearDisciplinaPsiquica({
             nivel: "1",
             accion: "Pasiva",
             mantenimiento: "Sí",
-            descripcion: "Filtra la entrada sensorial, permitiendo evitar sobrecargas",
+            descripcion: "Filtra la entrada sensorial, permitiendo evitar sobrecargas (como no cegarse ante un fogonazo) o aislar rangos concretos (oír una conversación concreta entre una muchedumbre, distinguir todos los ingredientes de una comida…). A efectos de juego, elimina cierta cantidad de penalizadores perceptivos en el sentido elegido por el mentalista.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -64,7 +64,7 @@ export const disciplinaHipersensibilidad = crearDisciplinaPsiquica({
             nivel: "2",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Permite colocar la entrada sensorial de uno de los sentidos",
+            descripcion: "Permite colocar la entrada sensorial de uno de los sentidos del psíquico en un lugar distinto al habitual, hasta la distancia indicada por el potencial alcanzado. Por ejemplo, podría “desplazar” su sentido del oído permitiéndole oír desde una puerta que está a distancia.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -114,7 +114,7 @@ export const disciplinaHipersensibilidad = crearDisciplinaPsiquica({
             nivel: "3",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Permite crear un nuevo tipo de sentido que permita",
+            descripcion: "Permite crear un nuevo tipo de sentido que permita detectar algo nuevo, por encima de sus cinco sentidos básicos.",
             efectos: [
             {
                 "dificultad": "Rutinario",

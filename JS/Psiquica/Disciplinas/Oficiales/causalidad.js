@@ -5,7 +5,7 @@ export const disciplinaCausalidad = crearDisciplinaPsiquica({
     id: "causalidad",
     nombre: "Causalidad",
     color: "#ef4444",
-    descripcion: "como Caos y Orden, esta disciplina juega con las casualidades y las fuerzas que generan el caos primordial que mueve la realidad. Con ella, aumenta o disminuye los efectos en cadena que provocan los cambios en el mundo de forma limitada. Sus efectos normalmente requieren un gran esfuerzo por parte del psíquico, ya que en realidad esta desplazando con sus matrices las fuerzas más básicas del universo.",
+    descripcion: "También conocida como Caos y Orden, esta disciplina juega con las casualidades y las fuerzas que generan el caos primordial que mueve la realidad. Con ella, aumenta o disminuye los efectos en cadena que provocan los cambios en el mundo de forma limitada. Sus efectos normalmente requieren un gran esfuerzo por parte del psíquico, ya que en realidad esta desplazando con sus matrices las fuerzas más básicas del universo.",
     modificador: "",
     poderes: [
         {
@@ -14,7 +14,7 @@ export const disciplinaCausalidad = crearDisciplinaPsiquica({
             nivel: "1",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Este poder concede al psíquico la capacidad de aumentar la",
+            descripcion: "Este poder concede al psíquico la capacidad de aumentar la ley de la causalidad de forma exponencial, acelerando cualquier proceso en curso en el área afectada. No controla los sucesos en su interior, pero por ejemplo, si una zona hay un volcán inactivo, existe una enorme posibilidad de que entre en erupción, o de que algo poco probable suceda como natural. Afecta a una zona específica delimitada por la dificultad del poder.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -64,7 +64,7 @@ export const disciplinaCausalidad = crearDisciplinaPsiquica({
             nivel: "2",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "El psíquico alinea su mente con las pequeñas fluctuaciones",
+            descripcion: "El psíquico alinea su mente con las pequeñas fluctuaciones de la causalidad y elimina las probabilidades y los ajustes imperceptibles apartándose completamente del factor del azar. Dependiendo de lo fuerte que sea el vínculo puede llegar a acercarse al resultado más óptimo, de forma que el psíquico deja de lanzar dados para cualquier habilidad o control de característica para obtener siempre un valor determinado por la dificultad del poder. Esta capacidad no permite sustituir tiradas de dados de controles de Resistencia, ni aquellas relacionadas con elementos sobrenaturales.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -114,7 +114,7 @@ export const disciplinaCausalidad = crearDisciplinaPsiquica({
             nivel: "2",
             accion: "Activa",
             mantenimiento: "No",
-            descripcion: "Alterando las más básicas fluctuaciones en el aire, el",
+            descripcion: "Alterando las más básicas fluctuaciones en el aire, el psíquico puede provocar un cambio en el ambiente produciendo alteraciones meteorológicas a media escala. Normalmente estos cambios no se realizan de manera automática, y requieren de por lo menos unos minutos (a veces, incluso horas) para que sus efectos se manifiesten debido a una reacción en cadena. Este poder no requiere mantenimiento, ya que es en el momento en el que se activa por primera vez cuando se determina el tipo de clima que el psíquico pretende crear.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -164,7 +164,7 @@ export const disciplinaCausalidad = crearDisciplinaPsiquica({
             nivel: "3",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "De forma contraria a Crear Caos, este poder reduce los",
+            descripcion: "De forma contraria a Crear Caos, este poder reduce los cambios producidos en su interior de una zona provocando una monotonía continua día tras día sin cambios apreciables. Hay que aclarar que esto no condiciona el comportamiento de la gente, simplemente desaparecen los sucesos azarosos de su vida, produciendo siempre un resultado intermedio y repetitivo. En grados mayores, este poder interfiere con la innaturalidad que supone la magia y la invocación, por lo que aquellos que se encuentren dentro de la zona afectada por este poder sufren automáticamente un negativo a sus habilidades determinado por el potencial alcanzado.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -214,7 +214,7 @@ export const disciplinaCausalidad = crearDisciplinaPsiquica({
             nivel: "3",
             accion: "Activa",
             mantenimiento: "No",
-            descripcion: "El psíquico controla la casualidad, pudiendo tratar de",
+            descripcion: "El psíquico controla la casualidad, pudiendo tratar de crear el resultado que desee siempre y cuando, por minúscula que sea la posibilidad, podría llegar a ocurrir. Cuanto más posible sea que algo pase, más fácil le resulta al mentalista provocarlo.",
             efectos: [
             {
                 "dificultad": "Rutinario",

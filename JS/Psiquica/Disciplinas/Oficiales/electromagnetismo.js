@@ -5,8 +5,8 @@ export const disciplinaElectromagnetismo = crearDisciplinaPsiquica({
     id: "electromagnetismo",
     nombre: "Electromagnetismo",
     color: "#38bdf8",
-    descripcion: "permite controlar el magnetismo y la electricidad que genera. potencial, mientras que en aquellos sin fuerza magnética, aplica un -20.",
-    modificador: "En ambientes ionizados el psíquico obtiene un +20 a su",
+    descripcion: "Esta disciplina permite controlar el magnetismo y la electricidad que genera. Modificador: En ambientes ionizados el psíquico obtiene un +20 a su potencial, mientras que en aquellos sin fuerza magnética, aplica un -20.",
+    modificador: "En ambientes ionizados el psíquico obtiene un +20 a su potencial, mientras que en aquellos sin fuerza magnética, aplica un -20.",
     poderes: [
         {
             id: "percibir-electricidad",
@@ -14,7 +14,7 @@ export const disciplinaElectromagnetismo = crearDisciplinaPsiquica({
             nivel: "1",
             accion: "Activa",
             mantenimiento: "No",
-            descripcion: "Detecta cualquier intensidad de electricidad en un radio de",
+            descripcion: "Detecta cualquier intensidad de electricidad en un radio de acción. Puede percibirse incluso a través de paredes y obstáculos, siempre que no se traten de elementos aislantes a la electricidad. En grados mayores es posible incluso detectar fuentes de vida que usen impulsos eléctricos en su organismo, aunque únicamente puede determinar su tamaño aproximado. Para evitar la detección, es necesario superar una RF.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -114,7 +114,7 @@ export const disciplinaElectromagnetismo = crearDisciplinaPsiquica({
             nivel: "1",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Controla la dirección y el comportamiento de las",
+            descripcion: "Controla la dirección y el comportamiento de las intensidades alcanzadas por el poder. Podría hacer saltar la electricidad a un objeto y evitar que se disipe o alterar la dirección de un rayo dirigiéndolo con su Proyección Psíquica contra un objetivo. Si se usa sobre un ser elemental de electricidad, este puede resistirse superando la RF contra la dificultad indicada.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -164,7 +164,7 @@ export const disciplinaElectromagnetismo = crearDisciplinaPsiquica({
             nivel: "1",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "El psíquico obtiene la capacidad de manejar las fuerzas",
+            descripcion: "El psíquico obtiene la capacidad de manejar las fuerzas magnéticas de los objetos a su alcance y desplazarlos a voluntad. El peso máximo están determinados por la dificultad alcanzada. El psíquico también puede mover dichos objetos por el aire, pero en tal caso, el peso que mueve queda reducido a la mitad.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -214,7 +214,7 @@ export const disciplinaElectromagnetismo = crearDisciplinaPsiquica({
             nivel: "2",
             accion: "Pasiva",
             mantenimiento: "Sí",
-            descripcion: "Crea un escudo magnético que defiende a su usuario",
+            descripcion: "Crea un escudo magnético que defiende a su usuario contra elementos metálicos y otros ataques eléctricos. Cualquier ataque realizado mediante un medio completamente metálico aplica un -20 a su habilidad ofensiva. A ciertos grados, el potencial es tal que es posible parar cualquier cosa física, incluso si no es de metal.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -264,7 +264,7 @@ export const disciplinaElectromagnetismo = crearDisciplinaPsiquica({
             nivel: "2",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Mediante el control de este poder el psíquico es capaz",
+            descripcion: "Mediante el control de este poder el psíquico es capaz de notar pequeñas alteraciones en los campos eléctricos e incluso leer los impulsos que utilizan los músculos de los seres vivos para realizar sus movimientos, de manera que el psíquico puede preveer cuales serán sus acciones y obtener un bono de +30 a todas las acciones físicas enfrentadas en su contra (en el caso de ser una criatura basada en electricidad, este bono se incrementa a +60). Para resistirse a este poder es necesario superara una RF contra la dificultad alcanzada.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -314,7 +314,7 @@ export const disciplinaElectromagnetismo = crearDisciplinaPsiquica({
             nivel: "2",
             accion: "Activa",
             mantenimiento: "No",
-            descripcion: "El psíquico proyecta una descarga eléctrica utilizando",
+            descripcion: "El psíquico proyecta una descarga eléctrica utilizando su Proyección Psíquica. Este poder ataca en Electricidad y el daño base viene determinado por lo que indique el potencial alcanzado. El ataque es perfectamente visible, incluso por aquellos incapaces de ver matrices.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -364,7 +364,7 @@ export const disciplinaElectromagnetismo = crearDisciplinaPsiquica({
             nivel: "3",
             accion: "Activa",
             mantenimiento: "No",
-            descripcion: "El psíquico manipula los campos gravitatorios para crear",
+            descripcion: "El psíquico manipula los campos gravitatorios para crear un túnel de aceleración que proyecta objetos metálicos con una fuerza desproporcionada. El daño del ataque es el doble del daño base del objeto utilizado, más un bono determinado por el potencial alcanzado. El ataque no se detiene al alcanzar su blanco, si no que continua en línea hasta una distancia máxima realizando el mismo ataque contra todos los objetivos que encuentre en su trayectoria. Un ataque lineal pone al rojo la munición debido a la fricción producida por la velocidad, por lo que el proyectil se destruye en el proceso si este no supera un control de Rotura. Ataca en Penetrante y en Calor, reduciendo 2 puntos el Tipo de Armadura del defensor.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -414,7 +414,7 @@ export const disciplinaElectromagnetismo = crearDisciplinaPsiquica({
             nivel: "3",
             accion: "Activa",
             mantenimiento: "No",
-            descripcion: "El control sobre la electricidad que obtiene el psíquico con",
+            descripcion: "El control sobre la electricidad que obtiene el psíquico con este poder es tal que puede controlar y redirigir los impulsos eléctricos de forma precisa, interrumpiendo los movimientos de otros seres o incluso, en grados mayores, obteniendo el control de sus acciones. Para evitar sus efectos es necesario superar la RF indicada en la dificultad alcanzada. Naturalmente, sólo afecta a seres físicos.",
             efectos: [
             {
                 "dificultad": "Rutinario",

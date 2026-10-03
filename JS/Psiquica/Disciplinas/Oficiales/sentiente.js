@@ -5,8 +5,8 @@ export const disciplinaSentiente = crearDisciplinaPsiquica({
     id: "sentiente",
     nombre: "Sentiente",
     color: "#ec4899",
-    descripcion: "Esta disciplina permite al psíquico percibir y controlar los sentimientos y sentidos de otras personas. Como la Telepatía, no tiene ninguna utilidad sobre seres sin mente, como golems o similares.  tampoco requiere un control de Proyección Psíquica para fijar su blanco (la tirada sigue siendo requerido para determinar el alcance del poder), pero si el psíquico no es capaz de obtener un mínimo de daño 10% en el resultado del asalto, el individuo afectado puede añadir un +60 a su control de RP. sentientes sobre un sujeto que se encuentra en contacto físico con él, puede sumar un bonificador de +20 a su potencial psíquico.",
-    modificador: "Siempre que un psíquico utilice uno de sus poderes",
+    descripcion: "Esta disciplina permite al psíquico percibir y controlar los sentimientos y sentidos de otras personas. Como la Telepatía, no tiene ninguna utilidad sobre seres sin mente, como golems o similares. Sentiente tampoco requiere un control de Proyección Psíquica para fijar su blanco (la tirada sigue siendo requerido para determinar el alcance del poder), pero si el psíquico no es capaz de obtener un mínimo de daño 10% en el resultado del asalto, el individuo afectado puede añadir un +60 a su control de RP. Modificador: Siempre que un psíquico utilice uno de sus poderes sentientes sobre un sujeto que se encuentra en contacto físico con él, puede sumar un bonificador de +20 a su potencial psíquico.",
+    modificador: "Siempre que un psíquico utilice uno de sus poderes sentientes sobre un sujeto que se encuentra en contacto físico con él, puede sumar un bonificador de +20 a su potencial psíquico.",
     poderes: [
         {
             id: "percibir-sentimientos",
@@ -14,7 +14,7 @@ export const disciplinaSentiente = crearDisciplinaPsiquica({
             nivel: "1",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Percibe lo que siente un individuo en ese mismo momento.",
+            descripcion: "Percibe lo que siente un individuo en ese mismo momento. Para resistirse a los efectos de este poder, se debe superar una RP contra la cifra que indique la dificultad alcanzada. El afectado tiene derecho a una nueva tirada cada 5 asaltos, pero sólo si sospecha que está siendo objeto de este tipo de poder.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -64,7 +64,7 @@ export const disciplinaSentiente = crearDisciplinaPsiquica({
             nivel: "1",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Detecta un sentimiento determinado en cualquier sujeto",
+            descripcion: "Detecta un sentimiento determinado en cualquier sujeto que se encuentre en el radio de acción del poder. Si por ejemplo se pretende detectar ira, el psíquico hallará a cualquier individuo colérico dentro de su área de influencia. Para resistirse, puede superarse una RP contra el valor alcanzado por la dificultad. Este poder no requiere que el personaje utilice su Proyección Psíquica, sino que afecta automáticamente a cualquier individuo que esté dentro del área.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -114,7 +114,7 @@ export const disciplinaSentiente = crearDisciplinaPsiquica({
             nivel: "1",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Conecta los sentidos del psíquico con los de otro individuo y",
+            descripcion: "Conecta los sentidos del psíquico con los de otro individuo y viceversa, permitiendo a ambos ver y escuchar lo que el otro sienta. Si el psíquico lo desea, puede negar el acceso a sus sentidos, aunque el afectado no tendrá la misma capacidad sobre el creador del lazo, salvo si supera la RP que indique la dificultad alcanzada. Cualquiera que falle el control de Resistencia tiene derecho a una nueva tirada cada cinco asaltos, pero sólo si sospecha que es objeto de ese tipo de poder. La distancia máxima de la conexión depende del potencial.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -164,7 +164,7 @@ export const disciplinaSentiente = crearDisciplinaPsiquica({
             nivel: "1",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Intensifica el sentimiento o estado de ánimo principal del individuo",
+            descripcion: "Intensifica el sentimiento o estado de ánimo principal del individuo en ese preciso momento. Ten en cuenta que este poder no es capaz de acrecentar una emoción que no exista previamente. Es posible, por ejemplo, hacer que una persona enfadada no sea capaz de contener su rabia, o que alguien triste se hunda en la depresión. Para resistirse hay que superar una RP, con derecho a una nueva tirada cada 5 asaltos si sospecha que está siendo objeto de este tipo de poder.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -214,7 +214,7 @@ export const disciplinaSentiente = crearDisciplinaPsiquica({
             nivel: "2",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "El psíquico hace desaparecer temporalmente alguno de",
+            descripcion: "El psíquico hace desaparecer temporalmente alguno de los cinco sentidos de un individuo. Puede eliminarse uno adicional por cada 20 puntos por los que el blanco afectado no supere la dificultad requerida. Tiene derecho a un nuevo control cada 5 asaltos, pero sólo puede recuperar un sentido cada vez.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -264,7 +264,7 @@ export const disciplinaSentiente = crearDisciplinaPsiquica({
             nivel: "2",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Crea sentimientos nuevos en un individuo. Por ejemplo,",
+            descripcion: "Crea sentimientos nuevos en un individuo. Por ejemplo, puede hacer que dos personas que no se soportan se enamoren la una de la otra, o que dos amantes sientan repulsión recíproca. Con este poder, el psíquico es capaz de someter a su antagonista a cualquier estado psicológico que desee, como miedo, dolor… Para resistirse, debe superar una RP contra la cifra que indique la dificultad alcanzada. Si los sentimientos que se crean son de naturaleza radicalmente opuesta a los del individuo, podrá aplicar un +20 adicional a su RP. Cualquier afectado tiene derecho a un nuevo control cada 5 asaltos, pero sólo si sospecha que estos sentimientos no son naturales en él.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -314,7 +314,7 @@ export const disciplinaSentiente = crearDisciplinaPsiquica({
             nivel: "2",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Este poder carga un objeto o lugar determinado con un fuerte",
+            descripcion: "Este poder carga un objeto o lugar determinado con un fuerte sentimiento, que invade automáticamente a cualquier individuo que lo toque o entre en él. Si por ejemplo el psíquico carga con ira una espada, cualquiera que la toque sentirá una cólera inmensa. Si se afecta un lugar, el área estará delimitada por el potencial alcanzado. Para resistirse hay que superar una RP, aunque quien no la pase tiene derecho a una nueva tirada cada 5 asaltos, si sospecha que sus sentimientos están siendo alterados de manera innatural. No se requiere utilizar Proyección Psíquica, sino estar en el lugar determinado o tocando el objeto. Fuera del área o sin contacto con el cuerpo cargado, los efectos desaparecen de inmediato.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -364,7 +364,7 @@ export const disciplinaSentiente = crearDisciplinaPsiquica({
             nivel: "2",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Permite al psíquico proyectar uno de sus sentidos hasta una",
+            descripcion: "Permite al psíquico proyectar uno de sus sentidos hasta una distancia máxima de un kilómetro. Una vez en dicho lugar, podrá utilizar sus habilidades secundarias perceptivas como si estuviera allí. La presencia del psíquico sólo podrá ser detectada por individuos que sean capaces de sentir matrices psíquicas. No es posible atravesar barreras de energía o lugares protegidos mágicamente.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -414,7 +414,7 @@ export const disciplinaSentiente = crearDisciplinaPsiquica({
             nivel: "3",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Funciona igual que el poder con el mismo nombre de",
+            descripcion: "Mientras se mantenga este poder, permite utilizar cualquier otra habilidad telepática sobre todos los sujetos que se encuentren en el radio que indique la dificultad alcanzada. Es posible designar quiénes sufren los ataques, siempre que se sea consciente de que se encuentra en su interior. Por poner un ejemplo, si se realiza un asalto psíquico mientras se mantiene este poder con nivel Muy Difícil, serán atacados todos los individuos que el psíquico designe y que se encuentren en un área de 10 metros. Sólo se realiza una única tirada para determinar la Proyección Psíquica del poder que se usa en área, incluso si los poderes afectan a multitud de blancos.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -464,7 +464,7 @@ export const disciplinaSentiente = crearDisciplinaPsiquica({
             nivel: "3",
             accion: "Activa",
             mantenimiento: "No",
-            descripcion: "Elimina los sentimientos que el psíquico desee de un",
+            descripcion: "Elimina los sentimientos que el psíquico desee de un individuo. Es necesario determinar cuál pretende borrar, y si es general o sólo hacia algo en concreto. Para resistirse, hay que superar la RP que indique la dificultad alcanzada, aunque puede aplicar un +20 si la emoción se encuentra muy arraigada en el corazón de ese sujeto. Por cada 20 puntos por los que no consiga superarla, se permite al psíquico eliminar un sentimiento adicional. Si falla la tirada por más de 80 puntos, puede incluso borrar todo sentimiento de la mente del individuo, prácticamente convirtiéndolo en un vegetal.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -514,7 +514,7 @@ export const disciplinaSentiente = crearDisciplinaPsiquica({
             nivel: "NA",
             accion: "Activa",
             mantenimiento: "S",
-            descripcion: "El psíquico puede sentir el uso de poderes y notar la",
+            descripcion: "El psíquico puede sentir el uso de poderes y notar la presencia de inividuos que posean también estas habilidades. De este modo, el personaje “ve” la energía de las matrices y, por tanto, no aplicará ningún penalizador por ceguera contra las habilidades psíquicas invisibles. Por ejemplo, quien alcance una dificultad Media podrá sentir matrices psíquicas activas y detectar poderes latentes en las personas, todo en un área de 25 metros.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -564,7 +564,7 @@ export const disciplinaSentiente = crearDisciplinaPsiquica({
             nivel: "NA",
             accion: "Pasiva",
             mantenimiento: "Sí",
-            descripcion: "Esta habilidad destruye poderes psíquicos activos, siempre",
+            descripcion: "Esta habilidad destruye poderes psíquicos activos, siempre que no sean superiores al nivel de dificultad que indica los efectos.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -614,7 +614,7 @@ export const disciplinaSentiente = crearDisciplinaPsiquica({
             nivel: "NA",
             accion: "Pasiva",
             mantenimiento: "Sí",
-            descripcion: "Esconde las habilidades mentales del psíquico contra el poder",
+            descripcion: "Esconde las habilidades mentales del psíquico contra el poder de “Sentir matrices” de otras personas. Este poder disminuye el potencial de “Sentir matrices” tantos grados de dificultad como indique el efecto alcanzado. Si el potencial de “Sentir matrices” de un tercero disminuye por debajo de su requerimiento base (es decir, de Fácil), los poderes del psíquico estarán ocultos ante esa detección. El poder de “Sentir matrices” sólo se anula con los poderes del psíquico que los oculta, por lo que seguirá funcionando con normalidad contra otros blancos.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -664,7 +664,7 @@ export const disciplinaSentiente = crearDisciplinaPsiquica({
             nivel: "NA",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Mediante esta habilidad, el personaje podrá conectar, con",
+            descripcion: "Mediante esta habilidad, el personaje podrá conectar, con la suya propia, las mentes de varios individuos con la capacidad de usar poderes psíquicos. De este modo, uno de los miembros conectados sumará a su potencial psíquico los bonificadores de Voluntad de los otros. Sólo uno podrá utilizar sus habilidades psíquicas mientras estén conectados, ya que el resto utiliza su poder sólo como potenciador. Las personas conectadas deben usar voluntariamente sus poderes con esta finalidad. El número de individuos capaces de conectarse depende del potencial del poder.",
             efectos: [
             {
                 "dificultad": "Rutinario",

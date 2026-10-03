@@ -5,8 +5,8 @@ export const disciplinaCrioquinesis = crearDisciplinaPsiquica({
     id: "crioquinesis",
     nombre: "Crioquinesis",
     color: "#22d3ee",
-    descripcion: "Al contrario que la Piroquinesis, esta disciplina permite al psíquico controlar las bajas temperaturas y el hielo. Sus poderes pueden congelar a personas o disminuir la temperatura a cientos de metros de distancia. el potencial psíquico al usar esta disciplina, de la siguiente manera: Volcán -30 Incendio de grandes proporciones -10 Terreno frío y lluvioso +10 Frío intenso +20 Zona helada o ártico +30",
-    modificador: "Como en la Piroquinesis, el entorno aumenta o disminuye",
+    descripcion: "Al contrario que la Piroquinesis, esta disciplina permite al psíquico controlar las bajas temperaturas y el hielo. Sus poderes pueden congelar a personas o disminuir la temperatura a cientos de metros de distancia. Modificador: Como en la Piroquinesis, el entorno aumenta o disminuye el potencial psíquico al usar esta disciplina, de la siguiente manera: Volcán -30 Incendio de grandes proporciones -10 Terreno frío y lluvioso +10 Frío intenso +20 Zona helada o ártico +30",
+    modificador: "Como en la Piroquinesis, el entorno aumenta o disminuye el potencial psíquico al usar esta disciplina, de la siguiente manera: Volcán -30 Incendio de grandes proporciones -10 Terreno frío y lluvioso +10 Frío intenso +20 Zona helada o ártico +30",
     poderes: [
         {
             id: "inmunidad-al-frio",
@@ -35,7 +35,7 @@ export const disciplinaCrioquinesis = crearDisciplinaPsiquica({
             nivel: "1",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Detecta cualquier variación en la temperatura ambiental",
+            descripcion: "Detecta cualquier variación en la temperatura ambiental dentro de un radio de acción, incluido el calor de un cuerpo vivo. Puede percibirse incluso a través de paredes u obstáculos, si estos no están basados en energía. Si el adversario oculta su Ki o no emite calor, esta habilidad es ineficaz. Este poder no requiere que el personaje utilice su Proyección Psíquica, sino que afecta automáticamente a cualquier individuo que esté dentro del área.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -85,7 +85,7 @@ export const disciplinaCrioquinesis = crearDisciplinaPsiquica({
             nivel: "1",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Congela cualquier tipo de cuerpo que no supere la RF",
+            descripcion: "Congela cualquier tipo de cuerpo que no supere la RF requerida. El individuo afectado sufre un penalizador a toda acción, equivalente a la cantidad por la que no ha superado la Resistencia. Si la diferencia es mayor de 40 puntos, queda congelado y es sometido a Paralización parcial. Puede usarse la TA de Frío como defensa contra este poder. Cualquier individuo afectado tiene derecho a un nuevo control cada cinco asaltos.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -135,7 +135,7 @@ export const disciplinaCrioquinesis = crearDisciplinaPsiquica({
             nivel: "1",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Crea varias intensidades de frío. Si se produce sobre un",
+            descripcion: "Crea varias intensidades de frío. Si se produce sobre un cuerpo líquido, puede formar hielo.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -185,7 +185,7 @@ export const disciplinaCrioquinesis = crearDisciplinaPsiquica({
             nivel: "1",
             accion: "Activa",
             mantenimiento: "No",
-            descripcion: "Disminuye varias intensidades de frío de una zona, ser u",
+            descripcion: "Disminuye varias intensidades de frío de una zona, ser u objeto. Si se usa sobre una criatura basada en frío o hielo, recibirá 5 puntos de daño por cada intensidad rebajada si no supera una RF requerida (los seres con acumulación de daño reciben 25 puntos).",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -235,7 +235,7 @@ export const disciplinaCrioquinesis = crearDisciplinaPsiquica({
             nivel: "1",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Controla el frío y el hielo de una zona. Puede modificarlo",
+            descripcion: "Controla el frío y el hielo de una zona. Puede modificarlo de cualquier manera, quebrándolo o cambiándolo de forma. Si se usa sobre un ser elemental, podrá evitarse este efecto superando una RF contra la dificultad indicada por el valor alcanzado.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -285,7 +285,7 @@ export const disciplinaCrioquinesis = crearDisciplinaPsiquica({
             nivel: "2",
             accion: "Activa",
             mantenimiento: "No",
-            descripcion: "El psíquico crea esquirlas de hielo, que puede proyectar",
+            descripcion: "El psíquico crea esquirlas de hielo, que puede proyectar como medio de ataque. Atacan en la TA de Frío o en la de Penetrantes, con un daño base que varía según el potencial alcanzado. Son perfectamente visibles, incluso para individuos que no son capaces de percibir matrices.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -335,7 +335,7 @@ export const disciplinaCrioquinesis = crearDisciplinaPsiquica({
             nivel: "2",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "El psíquico tiene control sobre la temperatura ambiental y",
+            descripcion: "El psíquico tiene control sobre la temperatura ambiental y puede disminuirla dentro de un amplio radio de acción.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -385,7 +385,7 @@ export const disciplinaCrioquinesis = crearDisciplinaPsiquica({
             nivel: "2",
             accion: "Pasiva",
             mantenimiento: "Sí",
-            descripcion: "Crea un escudo de hielo que protege al psíquico contra cualquier",
+            descripcion: "Crea un escudo de hielo que protege al psíquico contra cualquier fuente de ataque no basada en energía, salvo los conjuros de tipo Ataque de luz u oscuridad, los cuales sí se pueden detener. Al contrario que otros poderes, el Escudo de hielo permanece con la misma cantidad de puntos de vida con la que fue creado originariamente, en lugar de mantenerse con el mantenimiento natural del psíquico. Sin embargo, una vez creado pierde 5 puntos de vida por asalto, hasta que llega a la cantidad a la que el psíquico pueda mantener naturalmente el escudo.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -435,7 +435,7 @@ export const disciplinaCrioquinesis = crearDisciplinaPsiquica({
             nivel: "2",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Esta habilidad cristaliza cualquier clase de cuerpo que no supere",
+            descripcion: "Esta habilidad cristaliza cualquier clase de cuerpo que no supere la RF del poder. Todo lo que se congele de este modo se vuelve excepcionalmente quebradizo, pudiendo romperse con el menor golpe. Un personaje cristalizado está sometido a Paralización menor y, si sufre cualquier tipo de daño, recibe automáticamente un crítico con un penalizador de –40 puntos a su RF. En el caso de que se trate de un ser con acumulación, no sufre un crítico directo pero, a partir de ese momento, todo su cuerpo se considera como un punto vulnerable.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -485,7 +485,7 @@ export const disciplinaCrioquinesis = crearDisciplinaPsiquica({
             nivel: "3",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Mediante la manipulación del frío, el psíquico crea a su alrededor",
+            descripcion: "Mediante la manipulación del frío, el psíquico crea a su alrededor una zona de baja temperatura dentro de la cual, cualquier cuerpo en movimiento salvo el suyo propio, es inmovilizado si no pasa una RF. Si la tirada no es superada por una diferencia de 40, el cuerpo afectado queda completamente congelado y se somete a una Paralización completa. Si la diferencia es menor, el afectado recibirá sólo un penalizador a toda acción, equivalente al nivel de fracaso. Estos negativos duran mientras el poder se mantenga y, mientras el personaje congelado permanezca dentro del área, no tiene derecho a repetir la Resistencia. En el caso de que consiga superarla, debe repetir el control cada 5 asaltos que permanezca en el interior de la zona. Este poder no requiere que el personaje utilice su Proyección Psíquica, sino que afecta automáticamente a cualquier individuo que esté dentro de la zona. 2 2 1",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -535,7 +535,7 @@ export const disciplinaCrioquinesis = crearDisciplinaPsiquica({
             nivel: "3",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "El psíquico disminuye la temperatura a su alrededor hasta",
+            descripcion: "El psíquico disminuye la temperatura a su alrededor hasta el cero absoluto, destruyendo cualquier cuerpo, orgánico o inorgánico, que se encuentre en su radio. A términos de juego, todo aquel ser u objeto físico que no consiga superar una RF contra 100 cada turno que se encuentre en el interior del área, quedará inmediatamente hecho añicos por el Cero absoluto. Este poder no requiere que el personaje utilice su Proyección Psíquica, sino que afecta automáticamente a cualquier individuo que esté dentro de su radio.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -585,7 +585,7 @@ export const disciplinaCrioquinesis = crearDisciplinaPsiquica({
             nivel: "3",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Versión amplificada del poder de primer nivel de Crear frío,",
+            descripcion: "Versión amplificada del poder de primer nivel de Crear frío, que provoca temperaturas mucho más extremas.",
             efectos: [
             {
                 "dificultad": "Rutinario",

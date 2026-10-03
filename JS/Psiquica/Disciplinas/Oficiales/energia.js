@@ -14,7 +14,7 @@ export const disciplinaEnerga = crearDisciplinaPsiquica({
             nivel: "1",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Crea intensidades de energía o aumenta en la misma cantidad",
+            descripcion: "Crea intensidades de energía o aumenta en la misma cantidad una fuente ya existente. Puede formarse cualquier tipo de energía, desde hogueras a relámpagos, aunque no es posible hacerlo si esta es de origen sobrenatural.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -64,7 +64,7 @@ export const disciplinaEnerga = crearDisciplinaPsiquica({
             nivel: "1",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "El psíquico percibe la energía que se encuentra a su",
+            descripcion: "El psíquico percibe la energía que se encuentra a su alrededor. Detecta su intensidad y naturaleza, aunque no puede hacerlo si esta se halla oculta de algún modo. Este poder no requiere que el personaje utilice su Proyección Psíquica, sino que afecta automáticamente a todo lo que se encuentre dentro del área de acción.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -114,7 +114,7 @@ export const disciplinaEnerga = crearDisciplinaPsiquica({
             nivel: "1",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Crea un único objeto material simple, dándole forma",
+            descripcion: "Crea un único objeto material simple, dándole forma a partir de energía pura, como un cubo de fuerza o una espada. No podrá exceder el metro cúbico de capacidad. El material tiene una Resistencia 25, y estará basado en energía. Si se crea un arma, tendrá un daño base entre de 80 y 120, dependiendo de su tamaño, y una velocidad natural de 10. Dado que es pura energía, no emplea el bono de Fuerza del personaje, pero ataca en la TA de Electricidad.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -164,7 +164,7 @@ export const disciplinaEnerga = crearDisciplinaPsiquica({
             nivel: "1",
             accion: "Activa",
             mantenimiento: "No",
-            descripcion: "Permite al personaje realizar un ataque utilizando su energía psíquica. La descarga es perfectamente visible incluso para aquellos que no sean capaces de ver matrices.",
+            descripcion: "Permite al personaje realizar un ataque utilizando su Proyección Psíquica. Este poder actúa en la TA de Electricidad, con el daño base que indique el potencial alcanzado. Si llega a un nivel de dificultad lo suficientemente elevado, la energía es tan pura que daña incluso a seres inmateriales. El ataque es perfectamente visible, incluso para individuos que no son capaces de percibir matrices.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -214,7 +214,7 @@ export const disciplinaEnerga = crearDisciplinaPsiquica({
             nivel: "1",
             accion: "Pasiva",
             mantenimiento: "Sí",
-            descripcion: "Forma un escudo de energía que protege al psíquico frente a",
+            descripcion: "Forma un escudo de energía que protege al psíquico frente a cualquier tipo de ataque, incluyendo los de naturaleza sobrenatural. Al contrario que otros poderes, el escudo de energía permanece con la misma cantidad de puntos de vida con la que fue creado originariamente, en lugar de conservarse con el mantenimiento natural del psíquico. Sin embargo, una vez creado pierde 5 puntos de vida por asalto, hasta que llega a la cantidad en la que el psíquico puede mantener naturalmente el escudo.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -264,7 +264,7 @@ export const disciplinaEnerga = crearDisciplinaPsiquica({
             nivel: "2",
             accion: "Activa",
             mantenimiento: "No",
-            descripcion: "Disminuye varias intensidades de energía, salvo aquellas que",
+            descripcion: "Disminuye varias intensidades de energía, salvo aquellas que tiene origen sobrenatural. Si se usa sobre un ser basado en intensidades de cualquier tipo, recibirá 5 puntos de daño por cada intensidad rebajada, si no supera una RF contra la cifra indicada por el potencial del poder (los seres con acumulación reciben 25 puntos).",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -314,7 +314,7 @@ export const disciplinaEnerga = crearDisciplinaPsiquica({
             nivel: "2",
             accion: "Pasiva",
             mantenimiento: "Sí",
-            descripcion: "El psíquico, o la persona designada por este, se vuelve",
+            descripcion: "El psíquico, o la persona designada por este, se vuelve inmune al efecto de varias intensidades de un tipo de energía determinada. La inmunidad debe ser hacia una única clase, por lo que si el personaje decide, por ejemplo, no ser afectado por la electricidad, el frío y el fuego seguirán perjudicándole. En el caso de que reciba una agresión a la que es inmune, cada intensidad disminuye 5 puntos el daño base del ataque, y aumenta en +5 las Resistencias contra sus efectos.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -364,7 +364,7 @@ export const disciplinaEnerga = crearDisciplinaPsiquica({
             nivel: "2",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Otorga al psíquico el control completo de varias intensidades",
+            descripcion: "Otorga al psíquico el control completo de varias intensidades de energía, ya sea frío, calor o electricidad. El personaje podrá mover y dirigir libremente esas intensidades como le plazca, aunque si las emplea para atacar, reducirá a la mitad su Proyección Psíquica. Si se lanza sobre algo con presencia propia, o un ente vivo, podrá evitar este efecto superando una RF.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -414,7 +414,7 @@ export const disciplinaEnerga = crearDisciplinaPsiquica({
             nivel: "2",
             accion: "Activa",
             mantenimiento: "No",
-            descripcion: "Este poder permite transformar varias intensidades de",
+            descripcion: "Este poder permite transformar varias intensidades de energía de un tipo a otro. Un psíquico puede, por ejemplo, convertir el fuego en hielo o en electricidad. Si dicha energía posee presencia propia, podrá evitar este efecto superando una RF.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -464,7 +464,7 @@ export const disciplinaEnerga = crearDisciplinaPsiquica({
             nivel: "3",
             accion: "Activa",
             mantenimiento: "No",
-            descripcion: "El psíquico crea una cúpula de energía que destruye todo lo que se pone en contacto con ella. Es perfectamente visible incluso para individuos que no son capaces de ver matrices. El poder",
+            descripcion: "El psíquico crea una cúpula de energía que destruye todo lo que se ponga en contacto con ella. El ataque afecta a una amplia zona, dentro de la cual no es posible designar blancos. Se ejecuta en la TA de Electricidad y su daño depende del nivel de Dificultad del efecto alcanzado. A ciertas dificultades, el poder de la Cúpula es tan elevado y puro que incluso resulta capaz de dañar a seres inmateriales. El ataque es perfectamente visible, incluso para individuos que no son capaces de percibir matrices.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -514,7 +514,7 @@ export const disciplinaEnerga = crearDisciplinaPsiquica({
             nivel: "3",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Versión incrementada del poder de primer nivel Crear",
+            descripcion: "Versión incrementada del poder de primer nivel Crear energía, capaz de provocar efectos mucho más devastadores.",
             efectos: [
             {
                 "dificultad": "Rutinario",

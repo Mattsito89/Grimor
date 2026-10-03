@@ -38,7 +38,7 @@ const ORDER = {
     magiaOficiales: ["luz", "oscuridad", "creacion", "destruccion", "aire", "agua", "fuego", "tierra", "esencia", "ilusion", "necromancia", "libre-acceso"],
     magiaMetamagia: ["bellum", "potestas", "esoteros", "cognos", "precision"],
     magiaSubvias: ["caos", "guerra", "literae", "muerte", "musical", "nobleza", "paz", "pecado", "conocimiento", "sangre", "sue-os", "tiempo", "umbral", "vac-o"],
-    psiquicaOficiales: ["telepatia", "telequinesis", "piroquinesis", "crioquinesis", "incremento-fisico", "energia", "telemetria", "sentiente", "causalidad", "electromagnetismo", "teletransporte", "luz", "hipersensibilidad"]
+    psiquicaOficiales: ["telepatia", "telequinesis", "piroquinesis", "crioquinesis", "incremento-fisico", "energia", "telemetria", "sentiente", "causalidad", "electromagnetismo", "teletransporte", "luz", "hipersensibilidad", "poderesmatriciales"]
 };
 
 function esContenido(value) {

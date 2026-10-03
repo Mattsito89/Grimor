@@ -14,7 +14,7 @@ export const disciplinaIncrementoFsico = crearDisciplinaPsiquica({
             nivel: "1",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Aumenta la característica de Fuerza del psíquico. La",
+            descripcion: "Aumenta la característica de Fuerza del psíquico. La progresión de aumento se reduce a la mitad si el atributo incrementado alcanza un valor superior a 10; consecuentemente, necesita aumentar dos puntos para sumar sólo uno por encima de esta cantidad.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -64,7 +64,7 @@ export const disciplinaIncrementoFsico = crearDisciplinaPsiquica({
             nivel: "1",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "El psíquico es capaz de trasladarse a una velocidad muy",
+            descripcion: "El psíquico es capaz de trasladarse a una velocidad muy superior a la que normalmente desarrolla, aumentando su Tipo de movimiento. Si el desplazamiento se incrementa por encima de 10, la progresión de aumento se reduce a la mitad.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -114,7 +114,7 @@ export const disciplinaIncrementoFsico = crearDisciplinaPsiquica({
             nivel: "1",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Aumenta la Destreza o Agilidad del psíquico de un modo",
+            descripcion: "Aumenta la Destreza o Agilidad del psíquico de un modo desproporcionado. Si se modifica la Agilidad, sólo incrementa el nivel de la característica, no el Tipo de movimiento del personaje (es decir, el personaje es mucho más ágil, pero su velocidad de desplazamiento no se incrementa). La progresión se reduce a la mitad si el atributo alcanza un valor superior a 10; por tanto, necesita aumentar dos puntos para sumar sólo uno por encima de 10.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -164,7 +164,7 @@ export const disciplinaIncrementoFsico = crearDisciplinaPsiquica({
             nivel: "1",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "El psíquico puede alcanzar la dificultad de Inhumano al",
+            descripcion: "El psíquico puede alcanzar la dificultad de Inhumano al realizar acciones físicas. Además, mejora todas sus habilidades secundarias del campo atlético aplicando un bonificador a sus tiradas.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -214,7 +214,7 @@ export const disciplinaIncrementoFsico = crearDisciplinaPsiquica({
             nivel: "1",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "El psíquico puede saltar extraordinariamente, aumentando",
+            descripcion: "El psíquico puede saltar extraordinariamente, aumentando con este poder la potencia de su impulso. Suma cierta cantidad a su habilidad secundaria de Saltar y, en algunos casos, puede incluso alcanzar dificultades Inhumanas o de nivel Zen.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -264,7 +264,7 @@ export const disciplinaIncrementoFsico = crearDisciplinaPsiquica({
             nivel: "1",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "El psíquico puede realizar acrobacias y cabriolas realmente",
+            descripcion: "El psíquico puede realizar acrobacias y cabriolas realmente sorprendentes, casi sobrenaturales. Por tanto, suma cierta cantidad a su habilidad secundaria de Acrobacias y, en algunos casos, puede incluso alcanzar dificultades Inhumanas o de nivel Zen.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -314,7 +314,7 @@ export const disciplinaIncrementoFsico = crearDisciplinaPsiquica({
             nivel: "2",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Aumentando sus sentidos y su velocidad de reacción, este",
+            descripcion: "Aumentando sus sentidos y su velocidad de reacción, este poder permite al psíquico actuar antes que ninguna persona normal. Por ello, consigue un bonificador especial a su turno para el siguiente asalto.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -364,7 +364,7 @@ export const disciplinaIncrementoFsico = crearDisciplinaPsiquica({
             nivel: "2",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Incrementa la capacidad perceptiva del personaje. No tiene efecto añadido.",
+            descripcion: "Incrementa la capacidad perceptiva del personaje. A términos de juego, suma puntos a la Percepción del psíquico. La progresión se reduce a la mitad si el atributo alcanza un valor superior a 10.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -414,7 +414,7 @@ export const disciplinaIncrementoFsico = crearDisciplinaPsiquica({
             nivel: "2",
             accion: "Pasiva",
             mantenimiento: "Sí",
-            descripcion: "El psíquico refuerza la resistencia de su cuerpo controlando",
+            descripcion: "El psíquico refuerza la resistencia de su cuerpo controlando sus propias células. De este modo, se prepara para absorber daños y recibir impactos sin sufrir sus consecuencias. Este poder aumenta la RF del personaje en la cantidad que indique el efecto alcanzado.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -464,7 +464,7 @@ export const disciplinaIncrementoFsico = crearDisciplinaPsiquica({
             nivel: "2",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Controlando su físico a un nivel muy primario, el psíquico",
+            descripcion: "Controlando su físico a un nivel muy primario, el psíquico aumenta el ritmo de curación de su cuerpo. Este poder eleva su nivel de Regeneración, aunque no le permite alcanzar un nivel superior a 18.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -514,7 +514,7 @@ export const disciplinaIncrementoFsico = crearDisciplinaPsiquica({
             nivel: "3",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "El personaje puede incrementar a la vez todas las características físicas. Cuando una característica alcanza un valor superior a 10, su progresión de incremento se reduce a la mitad.",
+            descripcion: "El personaje puede incrementar a la vez todas las características de su cuerpo. Este poder otorga un bono a los cuatro atributos físicos (Fuerza, Destreza, Agilidad y Constitución), al igual que a la Percepción. Los efectos de este poder se acumulan a los de cualquier otra incrementación que el personaje mantenga activa. La progresión se reduce a la mitad en los atributos que alcancen un valor superior a 10. 2 2 3",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -564,7 +564,7 @@ export const disciplinaIncrementoFsico = crearDisciplinaPsiquica({
             nivel: "3",
             accion: "Activa",
             mantenimiento: "No",
-            descripcion: "Usando la energía de su matriz, el personaje puede",
+            descripcion: "Usando la energía de su matriz, el personaje puede descargar el desgaste físico de su cuerpo, restaurando algunos de sus puntos de Cansancio perdidos. Sin embargo, este poder no permite eliminar el cansancio que haya adquirido a causa de la fatiga psíquica.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -614,7 +614,7 @@ export const disciplinaIncrementoFsico = crearDisciplinaPsiquica({
             nivel: "3",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Permite emplear las habilidades de esta disciplina sobre",
+            descripcion: "Permite emplear las habilidades de esta disciplina sobre otros individuos. Los poderes que se imbuyen no pueden tener un efecto de dificultad superior al indicado.",
             efectos: [
             {
                 "dificultad": "Rutinario",

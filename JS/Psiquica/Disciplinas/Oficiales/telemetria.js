@@ -5,8 +5,8 @@ export const disciplinaTelemetra = crearDisciplinaPsiquica({
     id: "telemetria",
     nombre: "Telemetría",
     color: "#818cf8",
-    descripcion: "La  es la capacidad mental de percibir los residuos ambientales de tiempos pasados. Ello se debe a que la matriz psíquica de cada persona deja siempre tras de sí cierta energía residual, que depende de su estado de ánimo y de sus pensamientos en cada momento. Un individuo con esta disciplina es capaz de percibir dichos residuos y, consecuentemente, de sentir en mayor o menor grado lo que ha ocurrido en el pasado. telemétricos sobre algo con lo que se encuentre en contacto físico (ya sea un objeto o una persona), puede sumar un bonificador de +10 a su potencial. 2 2 5",
-    modificador: "Siempre que un psíquico utilice uno de sus poderes",
+    descripcion: "La Telemetría es la capacidad mental de percibir los residuos ambientales de tiempos pasados. Ello se debe a que la matriz psíquica de cada persona deja siempre tras de sí cierta energía residual, que depende de su estado de ánimo y de sus pensamientos en cada momento. Un individuo con esta disciplina es capaz de percibir dichos residuos y, consecuentemente, de sentir en mayor o menor grado lo que ha ocurrido en el pasado. Modificador: Siempre que un psíquico utilice uno de sus poderes telemétricos sobre algo con lo que se encuentre en contacto físico (ya sea un objeto o una persona), puede sumar un bonificador de +10 a su potencial.",
+    modificador: "Siempre que un psíquico utilice uno de sus poderes telemétricos sobre algo con lo que se encuentre en contacto físico (ya sea un objeto o una persona), puede sumar un bonificador de +10 a su potencial.",
     poderes: [
         {
             id: "percibir-residuos",
@@ -14,7 +14,7 @@ export const disciplinaTelemetra = crearDisciplinaPsiquica({
             nivel: "1",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "El psíquico percibe residuos ambientales de sentimientos",
+            descripcion: "El psíquico percibe residuos ambientales de sentimientos intensos emitidos mucho tiempo atrás. Las emociones deben de haber sido realmente fuertes para poder sentirlos, como una gran pasión o un miedo atroz.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -64,7 +64,7 @@ export const disciplinaTelemetra = crearDisciplinaPsiquica({
             nivel: "2",
             accion: "Activa",
             mantenimiento: "No",
-            descripcion: "Permite sentir lo que ha ocurrido en el pasado con un",
+            descripcion: "Permite sentir lo que ha ocurrido en el pasado con un objeto determinado o en un lugar concreto. Pueden percibirse absolutamente todos los sucesos acontecidos en el periodo de tiempo que alcance el poder.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -114,7 +114,7 @@ export const disciplinaTelemetra = crearDisciplinaPsiquica({
             nivel: "2",
             accion: "Activa",
             mantenimiento: "No",
-            descripcion: "Este poder otorga la habilidad de analizar el pasado de un",
+            descripcion: "Este poder otorga la habilidad de analizar el pasado de un individuo, tratando de percibir acciones que hubiese realizado. El psíquico puede buscar un acto concreto ejecutado por el afectado, o que haya hecho en un momento determinado. Podría, por ejemplo, saber si ha cometido un asesinato, o lo que hizo exactamente hace una semana a esa misma hora. Un individuo puede resistirse a este efecto superando una RP contra la dificultad indicada.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -164,7 +164,7 @@ export const disciplinaTelemetra = crearDisciplinaPsiquica({
             nivel: "3",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Permite proyectar los sentidos hacia el pasado, pudiendo",
+            descripcion: "Permite proyectar los sentidos hacia el pasado, pudiendo presenciar, como si se encontrase presente, cualquier suceso que ocurriera en el lugar en el que esté. Puede retrocederse tantos años como indique el potencial.",
             efectos: [
             {
                 "dificultad": "Rutinario",

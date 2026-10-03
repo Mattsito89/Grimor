@@ -4,11 +4,7 @@ export const poderesmatriciales = crearDisciplinaPsiquica({
     id: "poderesmatriciales",
     nombre: "Poderes Matriciales",
     color: "#353436",
-    descripcion: `De modo adicional a las habilidades mentales explicadas, existen cuatro poderes
-genéricos a los que tienen acceso todos los psíquicos indistintamente. No se
-encuentran dentro de ninguna disciplina, por lo que cualquiera de ellos puede
-adquirirse invirtiendo un solo CV, o gastar temporalmente uno para tener un
-acceso limitado a él. Estos poderes no tienen nivel.`,
+    descripcion: "De modo adicional a las habilidades mentales explicadas, existen cuatro poderes genéricos a los que tienen acceso todos los psíquicos indistintamente. No se encuentran dentro de ninguna disciplina, por lo que cualquiera de ellos puede adquirirse invirtiendo un solo CV, o gastar temporalmente uno para tener un acceso limitado a él. Estos poderes no tienen nivel.",
     modificador: "",
     poderes: [
         {
@@ -17,12 +13,7 @@ acceso limitado a él. Estos poderes no tienen nivel.`,
     nivel: "NA",
     accion: "Activa",
     mantenimiento: "Sí",
-    descripcion: `El psíquico puede sentir el uso de poderes y notar la
-presencia de inividuos que posean también estas habilidades. De este modo,
-el personaje “ve” la energía de las matrices y, por tanto, no aplicará ningún
-penalizador por ceguera contra las habilidades psíquicas invisibles. Por ejemplo,
-quien alcance una dificultad Media podrá sentir matrices psíquicas activas y
-detectar poderes latentes en las personas, todo en un área de 25 metros`,
+    descripcion: "El psíquico puede sentir el uso de poderes y notar la presencia de inividuos que posean también estas habilidades. De este modo, el personaje “ve” la energía de las matrices y, por tanto, no aplicará ningún penalizador por ceguera contra las habilidades psíquicas invisibles. Por ejemplo, quien alcance una dificultad Media podrá sentir matrices psíquicas activas y detectar poderes latentes en las personas, todo en un área de 25 metros.",
     efectos: [
         {
             "dificultad": "Rutinario",

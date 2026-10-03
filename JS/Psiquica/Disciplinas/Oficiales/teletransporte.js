@@ -5,7 +5,7 @@ export const disciplinaTeletransporte = crearDisciplinaPsiquica({
     id: "teletransporte",
     nombre: "Teletransporte",
     color: "#14b8a6",
-    descripcion: "controla el espacio así como su entendimiento por parte del mentalista.",
+    descripcion: "Esta disciplina controla el espacio así como su entendimiento por parte del mentalista.",
     modificador: "",
     poderes: [
         {
@@ -14,7 +14,7 @@ export const disciplinaTeletransporte = crearDisciplinaPsiquica({
             nivel: "1",
             accion: "Activa",
             mantenimiento: "No",
-            descripcion: "Permite cambiar la localización de un objeto inorgánico",
+            descripcion: "Permite cambiar la localización de un objeto inorgánico haciéndolo aparecer en otro lugar. Es necesario saber donde quiere colocarlo, y es imposible hacerlo dentro de materia sólida; de intentarlo, este queda en un lugar aleatorio (decidido por el DJ) cercano. Si el objeto lo sostiene una criatura viva tiene derecho a una tirada de RF para evitar perderlo. Tanto el peso como la distancia máxima a la que puede ser transportado son determinados por el nivel de dificultad del poder.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -64,7 +64,7 @@ export const disciplinaTeletransporte = crearDisciplinaPsiquica({
             nivel: "1",
             accion: "Activa",
             mantenimiento: "No",
-            descripcion: "Cambia la posición del psíquico en el mundo. Es necesario",
+            descripcion: "Cambia la posición del psíquico en el mundo. Es necesario conocer el lugar al que pretende recolocarse y no es posible hacerlo dentro de materia sólida; de intentarlo, el psíquico queda automáticamente inconsciente en un lugar aleatorio (decidido por el DJ) cercano al lugar donde pretendía transportarse.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -114,7 +114,7 @@ export const disciplinaTeletransporte = crearDisciplinaPsiquica({
             nivel: "1",
             accion: "Pasiva",
             mantenimiento: "Sí",
-            descripcion: "Usa la capacidad de transporte del psíquico para, realizando",
+            descripcion: "Usa la capacidad de transporte del psíquico para, realizando pequeños saltos de un lugar a otro, defenderse de los ataques. Este poder permite al personaje usar su Proyección Psíquica como si fuera Habilidad de Esquiva. Tanto el número máximo de esquivas que el personaje puede realizar por asalto como la distancia que puede moverse para anular los penalizadores de área son determinados por el grado de dificultad alcanzado.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -164,7 +164,7 @@ export const disciplinaTeletransporte = crearDisciplinaPsiquica({
             nivel: "2",
             accion: "Activa",
             mantenimiento: "No",
-            descripcion: "Versión potencial de la Autorecolocación, que permite al",
+            descripcion: "Versión potencial de la Autorecolocación, que permite al psíquico teletransportarse a grandes distancias. Es necesario conocer el lugar al que pretende recolocarse y no es posible hacerlo dentro de materia sólida; de intentarlo, el psíquico queda automáticamente inconsciente en un lugar aleatorio (decidido por el DJ) cercano al lugar donde pretendía transportarse.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -214,7 +214,7 @@ export const disciplinaTeletransporte = crearDisciplinaPsiquica({
             nivel: "3",
             accion: "Activa",
             mantenimiento: "Sí",
-            descripcion: "Permite ver todo el espacio en un único punto, observando",
+            descripcion: "Permite ver todo el espacio en un único punto, observando cuanto haya en enormes zonas de terreno desde “todos los ángulos” a la vez. Se trata de un poder tremendamente peligroso para el mentalista: sólo las psiques más poderosas y resistentes son capaces de mirar un aleph y asimilar lo contemplado sin sufrir daño severo. Cada asalto contemplando uno permite realizar un control de Percepción para localizar un lugar, objeto o persona concreto. Esta tirada tiene una dificultad indicada por el resultado del potencial psíquico que generó el Aleph. No importa dónde esté lo que busque, siempre que se encuentre en el área afectada por el aleph, si tiene éxito en el control de Percepción, el psíquico puede llegar a encontrarlo. Cada asalto de búsqueda continuada en un mismo aleph disminuye un punto el siguiente control de Percepción. No obstante, cada turno se debe realizar también un control de RP contra la dificultad indicada por el potencial alcanzado. En caso de fallar, el personaje obtiene un negativo a toda acción equivalente al nivel de fracaso que se recupera a un ritmo de 5 al día. Además pierde permanentemente un punto de INT y VOL por cada 40 puntos por los que se falla la tirada. Si se están empleando las reglas opcionales de Salud Mental de la Pantalla del Director se pueden cambiar los efectos de la RP por un control de Shock.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -264,7 +264,7 @@ export const disciplinaTeletransporte = crearDisciplinaPsiquica({
             nivel: "3",
             accion: "Activa",
             mantenimiento: "No",
-            descripcion: "Este poder es una versión más poderosa de Recolocar",
+            descripcion: "Este poder es una versión más poderosa de Recolocar objeto e igual que este, es necesario saber donde quieres colocarlo, y es imposible hacerlo dentro de materia sólida; de intentarlo, este queda en un lugar aleatorio (decidido por el DJ) cercano. Si el objeto lo sostiene una criatura viva tiene derecho a una tirada de RF para evitar perderlo. Tanto el peso como la distancia máxima a la que puede ser transportado son determinados por el nivel de dificultad del poder.",
             efectos: [
             {
                 "dificultad": "Rutinario",
@@ -314,7 +314,7 @@ export const disciplinaTeletransporte = crearDisciplinaPsiquica({
             nivel: "3",
             accion: "Activa",
             mantenimiento: "No",
-            descripcion: "Permite al psíquico teletransportar cualquier cosa, orgánica",
+            descripcion: "Permite al psíquico teletransportar cualquier cosa, orgánica o inorgánica, a grandes distancias. Es necesario conocer el lugar al que pretende trasportar el objeto, y no se puede recolocar dentro de materia sólida; de intentarlo, el objetivo aparece queda automáticamente inconsciente en un lugar aleatorio (decidido por el DJ) cercano al lugar donde pretendía transportarse. En el caso de que el objetivo no quiera ser trasportado, puede evitarlo superando un control de RF. La masa máxima que es posible trasportar es determinada por el nivel de dificultad alcanzado.",
             efectos: [
             {
                 "dificultad": "Rutinario",
